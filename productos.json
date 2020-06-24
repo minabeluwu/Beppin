@@ -1,0 +1,173 @@
+{
+    "productList": [
+         {
+           "nombre": "pantalon azul tommy",
+           "categoria": "hombre",
+           "precio": 200,
+           "descripcion": "pantalon de carbono",
+           "articulo": "pantalon",
+           "img": ""
+        },
+        {
+         "nombre": "sweater gris",
+         "categoria": "hombre",
+         "precio": 200,
+         "descripcion": "sweater gris de algodon",
+         "articulo": "sweater",
+         "img": ""
+      },
+      {
+         "nombre": "blusa amarilla",
+         "categoria": "mujer",
+         "precio": 300,
+         "descripcion": "blusa de algodon",
+         "articulo": "blusa",
+         "img": ""
+      },
+      {
+         "nombre": "tacones negros",
+         "categoria": "mujer",
+         "precio": 600,
+         "descripcion": "tacones negros altos",
+         "articulo": "tacones",
+         "img": ""
+      },
+      {
+         "nombre": "pañuelo amarilla",
+         "categoria": "accesorio",
+         "precio": 300,
+         "descripcion": "pañuelo de algodon",
+         "articulo": "pañuelo",
+         "img": ""
+      }
+    ],
+
+    "ofertas": [
+      {
+        "nombre": "pantalon azul tommy",
+        "categoria": "hombre",
+        "precio": 200,
+        "descripcion": "pantalon de carbono",
+        "articulo": "pantalon",
+        "img": ""
+     },
+     {
+      "nombre": "sweater gris",
+      "categoria": "hombre",
+      "precio": 200,
+      "descripcion": "sweater gris de algodon",
+      "articulo": "sweater",
+      "img": ""
+   },
+   {
+      "nombre": "blusa amarilla",
+      "categoria": "mujer",
+      "precio": 300,
+      "descripcion": "blusa de algodon",
+      "articulo": "blusa",
+      "img": ""
+   },
+   {
+      "nombre": "tacones negros",
+      "categoria": "mujer",
+      "precio": 600,
+      "descripcion": "tacones negros altos",
+      "articulo": "tacones",
+      "img": ""
+   },
+   {
+      "nombre": "pañuelo amarilla",
+      "categoria": "accesorio",
+      "precio": 300,
+      "descripcion": "pañuelo de algodon",
+      "articulo": "pañuelo",
+      "img": ""
+   }
+ ],  
+
+   "Promociones": [
+      {
+         "nombre": "pantalon azul tommy",
+         "categoria": "hombre",
+         "precio": 200,
+         "descripcion": "pantalon de carbono",
+         "articulo": "pantalon",
+         "img": ""
+      },
+      {
+         "nombre": "sweater gris",
+         "categoria": "hombre",
+         "precio": 200,
+         "descripcion": "sweater gris de algodon",
+         "articulo": "sweater",
+         "img": ""
+      },
+      {
+         "nombre": "blusa amarilla",
+         "categoria": "mujer",
+         "precio": 300,
+         "descripcion": "blusa de algodon",
+         "articulo": "blusa",
+         "img": ""
+      },
+      {
+         "nombre": "tacones negros",
+         "categoria": "mujer",
+         "precio": 600,
+         "descripcion": "tacones negros altos",
+         "articulo": "tacones",
+         "img": ""
+      },
+      {
+         "nombre": "pañuelo amarilla",
+         "categoria": "accesorio",
+         "precio": 300,
+         "descripcion": "pañuelo de algodon",
+         "articulo": "pañuelo",
+         "img": ""
+      }
+   ],
+
+   "Descuento": [
+      {
+         "nombre": "pantalon azul tommy",
+         "categoria": "hombre",
+         "precio": 200,
+         "descripcion": "pantalon de carbono",
+         "articulo": "pantalon",
+         "img": ""
+      },
+      {
+         "nombre": "sweater gris",
+         "categoria": "hombre",
+         "precio": 200,
+         "descripcion": "sweater gris de algodon",
+         "articulo": "sweater",
+         "img": ""
+      },
+      {
+         "nombre": "blusa amarilla",
+         "categoria": "mujer",
+         "precio": 300,
+         "descripcion": "blusa de algodon",
+         "articulo": "blusa",
+         "img": ""
+      },
+      {
+         "nombre": "tacones negros",
+         "categoria": "mujer",
+         "precio": 600,
+         "descripcion": "tacones negros altos",
+         "articulo": "tacones",
+         "img": ""
+      },
+      {
+         "nombre": "pañuelo amarilla",
+         "categoria": "accesorio",
+         "precio": 300,
+         "descripcion": "pañuelo de algodon",
+         "articulo": "pañuelo",
+         "img": ""
+      }
+   ]
+}

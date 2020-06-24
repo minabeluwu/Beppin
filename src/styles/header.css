@@ -1,0 +1,48 @@
+.header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .header-title {
+    margin: 50px 50px 0 0;
+  
+    color: #000;
+  }
+  
+  .header-form {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-form input {
+    width: 400px;
+    height: 30px;
+  }
+  .header-form button {
+    height: 30px;
+  }
+  
+  .header-nav {
+    margin: 40px 0 0 0;
+    width: 100%;
+  }
+  .header-list {
+    list-style: none;
+  
+    display: flex;
+    justify-content: center;
+  
+    margin-bottom: 30px;
+  }
+  .header-item {
+    width: 10%;
+  
+    display: flex;
+    justify-content: space-around;
+  }
+  .header-link {
+    text-decoration: none;
+    color: #000;
+  }
