@@ -5,7 +5,6 @@
     height: 60vh;
   }
   
-  
   .presetation-paragraph {
     color: #fff;
     margin: 70px 0 0 80px;
@@ -31,10 +30,6 @@
   
   .promotions-container {
     width: 90%;
-  
-    /* display: grid;
-    grid-template-columns: repeat(auto-fill, 250px);
-    grid-gap: 30px;*/
     
     margin: 0 0 50px 0; 
   
@@ -44,23 +39,17 @@
   
   .promotions-card {
     display: flex;
-  
     flex-direction: column;
     align-items: center;
 
     max-width: 250px;
-  
     box-shadow: 5px 5px 10px #888888;
-  
     padding: 10px;
-  
     margin: 20px 15px 15px 15px;
   }
     
   .promotions-img {
-    background-color: brown;
-
-    width: 250px;
+   width: 250px;
   }
   
   .promociones-content {

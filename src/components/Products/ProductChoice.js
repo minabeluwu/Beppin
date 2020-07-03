@@ -65,7 +65,7 @@ export default () => {
                         Tipo de Cierre-Botonadura:	Jersey  <br/>   
                     </p>
                     
-                    <Link to={`/comprar`} className="productResult-boton">Comprar</Link>
+                    <Link to={`/comprar`} className="productResult-boton">Buy</Link>
                     <a href=" #" className="productResult-boton">Añadir al carrito</a>
                 </div>
             </div>

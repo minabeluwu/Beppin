@@ -10,12 +10,13 @@
     color: #000;
   }
   
+  /* input */
   .header-form {
     margin-top: 50px;
     display: flex;
     align-items: center;
   }
-  
+
   .header-form input {
     width: 400px;
     height: 30px;
@@ -23,7 +24,21 @@
   .header-form button {
     height: 30px;
   }
-  
+
+  /* shopping cart */
+
+  .link-shoppingCart {
+    margin: 50px 0 0 60px;
+    height: 40px;
+  }
+
+  .header-shoppingCart {
+    width: 40px;
+    height: 40px;
+  }
+
+  /* links navegation */
+
   .header-nav {
     margin: 40px 0 0 0;
     width: 100%;

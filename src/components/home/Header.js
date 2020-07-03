@@ -4,6 +4,8 @@ import {
 } from 'react-router-dom'
 import "../../styles/header.css"
 
+import shoppingCart from "./../../img/shopping-cart.png"
+
 
 function Header() {
 
@@ -19,26 +21,25 @@ function Header() {
           <button>Search</button>
         </form>
 
+        <Link to={`/shoppingCart`} className="link-shoppingCart">
+          <img src={shoppingCart} className="header-shoppingCart"/>
+        </Link>
+
         <nav className="header-nav">
           <ul className="header-list">
             <li className="header-item">
-                <Link to={`/Categorias`} className="header-link">
-                  Categorias
+                <Link to={`/product`} className="header-link">
+                  Products
                 </Link>
             </li>
             <li className="header-item">
-                <Link to={`/Productos`} className="header-link">
-                  Productos
-                </Link>
-            </li>
-            <li className="header-item">
-              <Link to={`/ofertas`} className="header-link">
-                  Ofertas
+              <Link to={`/offers`} className="header-link">
+                Offers
               </Link>
             </li>
             <li className="header-item">
-              <Link to={`/misCompras`} className="header-link">
-                Mis compras
+              <Link to={`/myShopping`} className="header-link">
+                My Shopping
               </Link>
             </li>
           </ul>

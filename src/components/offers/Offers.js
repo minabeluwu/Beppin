@@ -1,7 +1,8 @@
 import React from "react"
-
 import "../../styles/listResult.css"
 import "../../styles/listProduct.css"
+
+import Filtered from "../Products/Filtered"
 
 
 import {
@@ -37,7 +38,34 @@ export default () => {
                 "img1": "https://img.ltwebstatic.com/images3_pi/2020/05/09/1589010101f18f68afc484035c3b986dd699ecf942_thumbnail_900x.webp",
                 "img2": "https://img.ltwebstatic.com/images3_pi/2020/05/09/15890100968c22dc62fadd0c9ae9c50aca48c8fbed_thumbnail_900x.webp",
                 "img3": "https://img.ltwebstatic.com/images3_pi/2020/05/09/158901011081108e9524b83c57fcc7eede66550dd5_thumbnail_900x.webp"
-             }
+             },
+             {
+              "id": 3,
+              "nombre": "Chaqueta denim",
+              "categoria": "mujer",
+              "precio": "$545.00",
+              "descripcion": "Chaqueta denim bajo crudo con estampado de camuflaje",
+              "articulo": "chaqueta",
+              "img": "https://img.ltwebstatic.com/images3_pi/2020/01/16/157916596034d273fbbe04380286af8e968ad91eac_thumbnail_900x.webp",
+    
+              "img1": "https://img.ltwebstatic.com/images3_pi/2020/01/16/1579165965aaddfa334e51072b8efe5d640e6aa835_thumbnail_900x.webp",
+              "img2": "https://img.ltwebstatic.com/images3_pi/2020/01/16/15791659699b1cf3330f2f919abdab6a275382adba_thumbnail_900x.webp",
+              "img3": "https://img.ltwebstatic.com/images3_pi/2020/01/16/1579165973bf7ec555831056bbddd5c96c7792ea6e_thumbnail_900x.webp"
+           },
+           {
+            "id": 4,
+            "nombre": "Falda denim",
+            "categoria": "mujer",
+            "precio": "$340.00",
+            "descripcion": "Falda denim rota bajo crudo",
+            "articulo": "Falda",
+            "img": "https://img.ltwebstatic.com/images2_pi/2019/06/25/15614498534145937621_thumbnail_900x1199.webp",
+    
+            "img1": "https://img.ltwebstatic.com/images2_pi/2019/06/25/15614498533250024442_thumbnail_900x1199.webp",
+            "img2": "https://img.ltwebstatic.com/images2_pi/2019/06/25/15614498521208463229_thumbnail_900x1199.webp",
+            "img3": "https://img.ltwebstatic.com/images2_pi/2019/06/25/15614498524190891998_thumbnail_900x1199.webp"
+         }
+    
         ]
     }
 
@@ -45,55 +73,15 @@ export default () => {
     <>
         <section class="listResult">
             <div className="filtered">
-                    <h2 className="filtered-title">Filtrado</h2>
-                    <ul className="filtered-list">
-                        <li className="filtered-item">
-                            <a href=" #" className="filtered-link">
-                                Filtrado #1
-                            </a>
-                        </li>
-                        <li className="filtered-item">
-                            <a href=" #" className="filtered-link">
-                                Filtrado #2
-                            </a>
-                        </li>
-                        <li className="filtered-item">
-                            <a href=" #" className="filtered-link">
-                                Filtrado #3
-                            </a>
-                        </li>
-                    </ul>
-
-                    <h2 className="filtered-title">Categorias</h2>
-                    <ul className="filtered-list">
-                        <li className="filtered-item">
-                            <a href=" #" className="filtered-link">
-                                Vestidos
-                            </a>
-                        </li>
-                        <li className="filtered-item">
-                            <a href=" #" className="filtered-link">
-                                Enterizosa
-                            </a>
-                        </li>
-                        <li className="filtered-item">
-                            <a href=" #" className="filtered-link">
-                                Sweaters
-                            </a>
-                        </li>
-                        <li className="filtered-item">
-                            <a href=" #" className="filtered-link">
-                                ...
-                            </a>
-                        </li>
-                    </ul>
+                <Filtered />
             </div>
 
             <div className="result">
+                <h2 className="listResult-title">Offers</h2>
 
                 <div className="promotions-container">
                     <div className="promotions-card">
-                        <Link to={`/producto`} className="promotions-link">
+                        <Link to={`/productView`} className="promotions-link">
                             <img src={json.productList[0].img} alt=" " className="promotions-img" />
                         </Link>
 
@@ -104,13 +92,35 @@ export default () => {
                     </div>
 
                     <div className="promotions-card">
-                        <Link to={`/producto`} className="promotions-link">
+                        <Link to={`/productView`} className="promotions-link">
                             <img src={json.productList[1].img} alt=" " className="promotions-img" />
                         </Link>
 
                         <p className="promociones-content">
                             <span>{json.productList[1].precio}</span>
                             <br /> {json.productList[1].descripcion}
+                        </p>
+                    </div>
+
+                    <div className="promotions-card">
+                        <Link to={`/productView`} className="promotions-link">
+                            <img src={json.productList[2].img} alt=" " className="promotions-img" />
+                        </Link>
+
+                        <p className="promociones-content">
+                            <span>{json.productList[2].precio}</span>
+                            <br /> {json.productList[2].descripcion}
+                        </p>
+                    </div>
+
+                    <div className="promotions-card">
+                        <Link to={`/productView`} className="promotions-link">
+                            <img src={json.productList[3].img} alt=" " className="promotions-img" />
+                        </Link>
+
+                        <p className="promociones-content">
+                            <span>{json.productList[3].precio}</span>
+                            <br /> {json.productList[3].descripcion}
                         </p>
                     </div>
                 </div>

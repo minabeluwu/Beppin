@@ -1,6 +1,8 @@
 import React from "react"
 import "../../styles/listResult.css"
 import "../../styles/listProduct.css"
+import Filtered from "../Products/Filtered"
+
 
 import {Link} from 'react-router-dom' 
 
@@ -40,43 +42,7 @@ export default () => {
     <>
         <section class="listResult">
             <div className="filtered">
-                <h2 className="filtered-title">Categoria</h2>
-                    <ul className="filtered-list">
-                        <li className="filtered-item">
-                            <a href=" #" className="filtered-link">
-                                Categoria #1
-                            </a>
-                        </li>
-                        <li className="filtered-item">
-                            <a href=" #" className="filtered-link">
-                                Categoria #2
-                            </a>
-                        </li>
-                        <li className="filtered-item">
-                            <a href=" #" className="filtered-link">
-                                Categoria #3
-                            </a>
-                        </li>
-                    </ul>
-
-                    <h2 className="filtered-title">Filtrado</h2>
-                    <ul className="filtered-list">
-                        <li className="filtered-item">
-                            <a href=" #" className="filtered-link">
-                                Filtrado #1
-                            </a>
-                        </li>
-                        <li className="filtered-item">
-                            <a href=" #" className="filtered-link">
-                                Filtrado #2
-                            </a>
-                        </li>
-                        <li className="filtered-item">
-                            <a href=" #" className="filtered-link">
-                                Filtrado #3
-                            </a>
-                        </li>
-                    </ul>
+                <Filtered />
             </div>
 
             <div className="result">
@@ -84,7 +50,7 @@ export default () => {
 
                 <div className="promotions-container">
                     <div className="promotions-card">
-                        <Link to={`/producto`} className="promotions-link">
+                        <Link to={`/productView`} className="promotions-link">
                             <img src={json.productList[0].img} alt=" " className="promotions-img" />
                         </Link>
 
@@ -95,7 +61,7 @@ export default () => {
                     </div>
 
                     <div className="promotions-card">
-                        <Link to={`/producto`} className="promotions-link">
+                        <Link to={`/productView`} className="promotions-link">
                             <img src={json.productList[1].img} alt=" " className="promotions-img" />
                         </Link>
 

@@ -67,11 +67,11 @@ function Discount() {
 
   return (
     <section className="promotions">
-      <h1 className="promotions-title">Descuento</h1>
+      <h1 className="promotions-title">Discount</h1>
 
       <div className="promotions-container">
         <div className="promotions-card">
-          <Link to={`/producto`} className="promotions-link">
+          <Link to={`/productView`} className="promotions-link">
             <img src={json.productList[0].img} alt=" " className="promotions-img" />
           </Link>
 
@@ -82,7 +82,7 @@ function Discount() {
         </div>
 
         <div className="promotions-card">
-          <Link to={`/producto`} className="promotions-link"> 
+          <Link to={`/productView`} className="promotions-link"> 
             <img src={json.productList[1].img} alt=" " className="promotions-img" />
           </Link>
 
@@ -93,7 +93,7 @@ function Discount() {
         </div>
 
         <div className="promotions-card">
-          <Link to={`/producto`} className="promotions-link">
+          <Link to={`/productView`} className="promotions-link">
             <img src={json.productList[2].img} alt=" " className="promotions-img" />
           </Link>
 
@@ -104,7 +104,7 @@ function Discount() {
         </div>
 
         <div className="promotions-card">
-          <Link to={`/producto`} className="promotions-link">
+          <Link to={`/productView`} className="promotions-link">
             <img src={json.productList[3].img} alt=" " className="promotions-img" />
           </Link>
 

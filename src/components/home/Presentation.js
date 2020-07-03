@@ -5,9 +5,8 @@ function Presetation() {
     <div className="background">
       <div className="presetation-container">
           <p className="presetation-paragraph">
-            Si no puedes ser mejor que tu
-            <br /> competencia, al menos <br />
-            vístete mejor.  
+          If you can't be better than <br/> your competition, 
+          <br/> at least dress better.
           </p>
       </div>
     </div>

@@ -1,18 +1,18 @@
 import React from "react"
 import Header from "./components/home/Header"
-import ListResult from "./components/resultados/ListResult"
-import Productos from "./components/Productos/Productos"
-import SeleccionProduct from "./components/Productos/SeleccionProduct"
-import Categorias from "./components/categorias/Categorias"
-import Mujer from "./components/categorias/Mujer"
-import Hombre from "./components/categorias/Hombre"
-import Kids from "./components/categorias/Kids"
-import Bebes from "./components/categorias/Bebes"
-import Accesorios from "./components/categorias/Accesorios"
-import Belleza from "./components/categorias/Belleza"
-import Ofertas from "./components/ofertas/Ofertas"
-import MisCompras from "./components/misCompras/MisCompras"
-import Compra from "./components/misCompras/Compra"
+import ListResult from "./components/result/ListResult"
+import Product from "./components/Products/Product"
+import ProductChoice from "./components/Products/ProductChoice"
+import Categories from "./components/home/Categories"
+import Woman from "./components/categories/Woman"
+import Man from "./components/categories/Man"
+import Kids from "./components/categories/Kids"
+import Babies from "./components/categories/Babies"
+import Accessories from "./components/categories/Accessories"
+import Beauty from "./components/categories/Beauty"
+import Offers from "./components/offers/Offers"
+import MyShopping from "./components/myShopping/MyShopping"
+import ShoppingCart from "./components/shoppingCart/ShoppingCart"
 import Home from "./Home"
 import "./App.css"
 
@@ -21,6 +21,7 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
+
 
 function App() {
   return (
@@ -34,50 +35,53 @@ function App() {
           </Route> 
         </Switch>
 
-          <Route path="/Productos" exact>
-              <Productos/>
+          <Route path="/product" exact>
+              <Product/>
           </Route>
         
-          <Route path="/resultados" exact>
+          <Route path="/result" exact>
             <ListResult />
           </Route>
 
-          <Route path="/categorias" exact>
-            <Categorias />
+          <Route path="/categories" exact>
+            <Categories />
           </Route>
-            <Route path="/Mujer" exact>
-              <Mujer />
+
+            <Route path="/woman" exact>
+              <Woman />
             </Route>
-            <Route path="/Hombre" exact>
-              <Hombre />
+            <Route path="/man" exact>
+              <Man />
             </Route>
-            <Route path="/Kids" exact>
+            <Route path="/kids" exact>  
               <Kids />
             </Route>
-            <Route path="/Bebes" exact>
-              <Bebes />
+            <Route path="/babies" exact>
+              <Babies />
             </Route>
-            <Route path="/Accesorios" exact>
-              <Accesorios />
+            <Route path="/accessories" exact>
+              <Accessories />
             </Route>
-            <Route path="/belleza" exact>
-            <Belleza />
+            <Route path="/beauty" exact>
+              <Beauty />
+            </Route>
+
+          <Route path="/offers" exact> 
+            <Offers />
           </Route>
 
-          <Route path="/ofertas" exact>
-            <Ofertas />
+          <Route path="/myShopping" exact>
+            <MyShopping />
           </Route>
 
-          <Route path="/misCompras" exact>
-            <MisCompras />
+          <Route path="/productView" exact> {/* productos */}
+            <ProductChoice />
           </Route>
 
-          <Route path="/producto" exact>
-            <SeleccionProduct />
+          <Route path="/shoppingCart" exact> {/* productos */}
+            < ShoppingCart/>
           </Route>
-          <Route path="/comprar" exact>
-            <Compra />
-          </Route>
+
       </BrowserRouter>
 
     </>

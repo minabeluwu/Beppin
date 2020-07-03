@@ -1,56 +1,90 @@
 import React from "react"
-import mujer from "../../img/mujer.png"
-import hombre from "../../img/hombre.png"
-import niños from "../../img/chico.png"
-import bebes from "../../img/baby-boy.png"
-import accesorios from "../../img/lentes.png"
-import maquillaje from "../../img/maquillaje.png"
-import "../../styles/categories.css"
+
 import {
-  Link
-} from 'react-router-dom'
+    Link
+  } from 'react-router-dom'
 
-function Categories() {
+import "../../styles/categories.css"
+
+import camisetaRejillas from "../../img/camisetaRejillas.jpg"
+import camisaHombre from "../../img/camisaDeRayas.jpg"
+import ropaNiños from "../../img/enterizoNiña.jpg"
+import enterizobebe from "../../img/enterizoB.jpg"
+import lentes from "../../img/accesorioL.jpg"
+import brochas from "../../img/brochas.jpg"
+            
+
+export default () => {
   return (
-    <section className="categories">
-      <h2 className="categories-title">Categorias</h2>
+    <>
+        <section class="categories">
+            <div className="categories-size">
+                <h2 className="categories-title">Categories</h2>
 
-      <div className="categories-container">
-        <Link to={`/categorias`} className="categories-card">
-            <img src={mujer} alt=" " className="categories-img" />
-            <p className="categories-paragraph">Mujeres</p>
-        </Link>
+                <div className="categories-container">
+                    <div className="categories-card">
+                        <Link to={`/woman`} className="categories-link">
+                            <img src={camisetaRejillas} alt=" " className="categories-img" />
+                        </Link>
 
-        <Link to={`/categorias`} className="categories-card">
-          <img src={hombre} alt=" " className="categories-img" />
-            <p className="categories-paragraph">Hombres</p>
-        </Link>
+                        <p className="categories-content">
+                            Woman
+                        </p>
+                    </div>
 
-        <Link to={`/categorias`} className="categories-card">
-          <img src={niños} alt=" " className="categories-img" />
-          <p className="categories-paragraph">Niños</p>
-        </Link>
+                    <div className="categories-card">
+                        <Link to={`/man`} className="categories-link">
+                            <img src={camisaHombre} alt=" " className="categories-img" />
+                        </Link>
 
-        <Link to={`/categorias`} className="categories-card">
-          <img src={bebes} alt=" " className="categories-img" />
-          <p className="categories-paragraph">Bebes</p>
-        </Link>
-        
-        <Link to={`/categorias`} className="categories-card">
-          <img src={accesorios} alt=" " className="categories-img" />
-          <p className="categories-paragraph">Accesorios</p>
-        </Link>
-       
-        <Link to={`/categorias`} className="categories-card">
-          <img src={maquillaje} alt=" " className="categories-img" />
-          <p className="categories-paragraph">
-            belleza y cuidado <br />
-            personal
-          </p>
-        </Link>
-      </div>
-    </section>
+                        <p className="categories-content">
+                            Man
+                        </p>
+                    </div>
+
+                    <div className="categories-card">
+
+                        <Link to={`/kids`} className="categories-link">
+                            <img src={ropaNiños} alt=" " className="categories-img" />
+                        </Link>
+
+                        <p className="categories-content">
+                            Kids
+                        </p>
+                    </div>
+
+                    <div className="categories-card">
+                        <Link to={`/babies`} className="categories-link">
+                            <img src={enterizobebe} alt=" " className="categories-img" />
+                        </Link>
+
+                        <p className="categories-content">
+                            Babies
+                        </p>
+                    </div>
+
+                    <div className="categories-card">
+                        <Link to={`/accessories`} className="categories-link">
+                            <img src={lentes} alt=" " className="categories-img" />
+                        </Link>
+
+                        <p className="categories-content">
+                            accessories
+                        </p>
+                    </div>
+
+                    <div className="categories-card">
+                        <Link to={`/beauty`} className="categories-link">
+                            <img src={brochas} alt=" " className="categories-img" />
+                        </Link>
+                        <p className="categories-content">
+                            beauty and personal care
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </>
   )
 }
-
-export default Categories
