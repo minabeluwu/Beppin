@@ -13,6 +13,9 @@ import Beauty from "./components/categories/Beauty"
 import Offers from "./components/offers/Offers"
 import MyShopping from "./components/myShopping/MyShopping"
 import ShoppingCart from "./components/shoppingCart/ShoppingCart"
+import Buy from "./components/shoppingCart/Buy"
+import Pay from "./components/shoppingCart/Pay"
+import Summary from "./components/shoppingCart/Summary"
 import Home from "./Home"
 import "./App.css"
 
@@ -21,6 +24,7 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
+
 
 
 function App() {
@@ -74,14 +78,22 @@ function App() {
             <MyShopping />
           </Route>
 
-          <Route path="/productView" exact> {/* productos */}
+          <Route path="/productView" exact> 
             <ProductChoice />
           </Route>
 
-          <Route path="/shoppingCart" exact> {/* productos */}
+          <Route path="/shoppingCart" exact> 
             < ShoppingCart/>
           </Route>
-
+          <Route path="/buy" exact>
+            < Buy/>
+          </Route>
+          <Route path="/pay" exact>
+            < Pay/>
+          </Route>
+          <Route path="/summary" exact>
+            < Summary/>
+          </Route>
       </BrowserRouter>
 
     </>

@@ -161,7 +161,6 @@ export default () => {
                 </div>
                 
                 {/* Precio Total */}
-
                 <div className="cardCost-container">
                     <p className="cardCost-total">overall price</p>
                     <p className="cardCost-price">{json.productList[3].precio}</p>
@@ -170,8 +169,8 @@ export default () => {
         </section>
         <div className="buttons-container">
                 <div className="buttons">
-                    <a href="#" className="button">Cancel</a>
-                    <a href="#" className="button">Buy</a>
+                    <a href="#" className="button">Cancel</a> {/* Este boton anula todas las compras agregadas, hace un reset. */}
+                    <Link to={`/Buy`} className="button">Buy</Link>
                 </div>
             </div>
     </>

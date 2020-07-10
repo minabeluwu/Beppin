@@ -1,8 +1,5 @@
 .shoppingCart {
-outline: 1px solid black;
-
 display: flex;
-
 }
 
 .shoppingCart-shoppingList {

@@ -1,0 +1,10 @@
+.buy {
+    outline: 1px solid black;
+
+    width: 80%;
+    margin: 20px auto 20px auto;
+}
+
+.summaryBuy {
+    background-color: #ccc;
+}

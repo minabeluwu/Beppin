@@ -22,7 +22,7 @@ function Header() {
         </form>
 
         <Link to={`/shoppingCart`} className="link-shoppingCart">
-          <img src={shoppingCart} className="header-shoppingCart"/>
+          <img src={shoppingCart} alt="" className="header-shoppingCart"/>
         </Link>
 
         <nav className="header-nav">
