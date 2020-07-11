@@ -1,14 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import "../../styles/shoppingCart.css";
-import Product from "./Product";
-import ShoppingCartAPIResponse from "../API/ShoppingCartAPIResponse";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import '../../styles/shoppingCart.css'
+import Product from './Product'
+import ShoppingCartAPIResponse from '../API/ShoppingCartAPIResponse'
+import Cost from './Cost'
 
 export default () => {
   return (
     <>
-      <section className="shoppingCart">
-        <div className="shoppingCart-shoppingList">
+      <section className='shoppingCart'>
+        <div className='shoppingCart-shoppingList'>
           {ShoppingCartAPIResponse.productList.map(
             ({ id, nombre, precio, img, descripcion }) => (
               <Product
@@ -22,67 +23,23 @@ export default () => {
           )}
         </div>
 
-        <div className="cardCost">
-          <div className="cardCost-container">
-            <p className="cardCost-productName">
-              <span>{ShoppingCartAPIResponse.productList[0].id}</span>
-              {ShoppingCartAPIResponse.productList[0].nombre}
-            </p>
-            <p className="cardCost-price">
-              {ShoppingCartAPIResponse.productList[0].precio}
-            </p>
-          </div>
-
-          <div className="cardCost-container">
-            <p className="cardCost-productName">
-              <span>{ShoppingCartAPIResponse.productList[1].id}</span>
-              {ShoppingCartAPIResponse.productList[1].nombre}
-            </p>
-            <p className="cardCost-price">
-              {ShoppingCartAPIResponse.productList[1].precio}
-            </p>
-          </div>
-
-          <div className="cardCost-container">
-            <p className="cardCost-productName">
-              <span>{ShoppingCartAPIResponse.productList[2].id}</span>
-              {ShoppingCartAPIResponse.productList[2].nombre}
-            </p>
-            <p className="cardCost-price">
-              {ShoppingCartAPIResponse.productList[2].precio}
-            </p>
-          </div>
-
-          <div className="cardCost-container">
-            <p className="cardCost-productName">
-              <span>{ShoppingCartAPIResponse.productList[3].id}</span>
-              {ShoppingCartAPIResponse.productList[3].nombre}
-            </p>
-            <p className="cardCost-price">
-              {ShoppingCartAPIResponse.productList[3].precio}
-            </p>
-          </div>
-
-          {/* Precio Total */}
-          <div className="cardCost-container">
-            <p className="cardCost-total">overall price</p>
-            <p className="cardCost-price">
-              {ShoppingCartAPIResponse.productList[3].precio}
-            </p>
-          </div>
+        <div className='cardCost'>
+          {ShoppingCartAPIResponse.productList.map(({ nombre, id, precio }) => (
+            <Cost nombre={nombre} id={id} precio={precio} />
+          ))}
         </div>
       </section>
-      <div className="buttons-container">
-        <div className="buttons">
-          <a href="#" className="button">
+      <div className='buttons-container'>
+        <div className='buttons'>
+          <a href='#' className='button'>
             Cancel
-          </a>{" "}
+          </a>
           {/* Este boton anula todas las compras agregadas, hace un reset. */}
-          <Link to={`/Buy`} className="button">
+          <Link to={`/Buy`} className='button'>
             Buy
           </Link>
         </div>
       </div>
     </>
-  );
-};
+  )
+}
