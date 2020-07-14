@@ -7,7 +7,14 @@ export default ({ id, nombre, precio }) => {
         <span>{id}</span>
         {nombre}
       </p>
+<<<<<<< HEAD
       <p className='cardCost-price'>${precio}</p>
     </div>
   )
 }
+=======
+      <p className='cardCost-price'>{precio}</p>
+    </div>
+  )
+}
+>>>>>>> 1762f7221bc2e56dbc5b807fb47cb7189ae93e83
