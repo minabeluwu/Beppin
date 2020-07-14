@@ -22,7 +22,8 @@ import "./App.css"
 import {
   BrowserRouter,
   Switch,
-  Route
+  Route,
+  useParams
 } from 'react-router-dom'
 
 
@@ -78,7 +79,7 @@ function App() {
             <MyShopping />
           </Route>
 
-          <Route path="/productView" exact> 
+          <Route path="/productView/:id" exact> 
             <ProductChoice />
           </Route>
 

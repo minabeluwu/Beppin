@@ -9,6 +9,18 @@ export default () => {
   return (
     <>
       <section className="buy">
+            
+            <div>
+                <h1>payment details</h1>
+
+                <p>Banco / medio de pago</p>
+                <p>
+                    Nombre: Ana Maria <br/>
+                    correo: ana34@gmail.com <br/>
+                    direccion: camarones <br/>
+                    tel: +54 911765892
+                </p>
+            </div>
             <div>
                 <h1>purchase data</h1>
 
@@ -16,6 +28,8 @@ export default () => {
                     <h2>Product</h2>
 
                     <ul>
+                        <li>name of the product</li>
+                        <li>name of the product</li>
                         <li>name of the product</li>
                     </ul>
                 </div>
@@ -27,18 +41,9 @@ export default () => {
             </div>
 
             <div>
-                <h1>payment details</h1>
-
-
-            </div>
-
-            <div>
-                <h1>invoice data</h1>
-            </div>
-
-            <div>
                 <a href="#">go out</a>
-                <a href="#">Continue</a>
+
+            <Link to={`/`}>Buy</Link>
             </div>
       </section>
     </>
