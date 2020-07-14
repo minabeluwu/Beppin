@@ -12,8 +12,6 @@ import { Link } from "react-router-dom";
 
 export default () => {
   
-  
-
   return (
     <section class="productResult">
       <div className="productResult-images">
@@ -43,7 +41,7 @@ export default () => {
 
         <div className="productResult-description">
           <h1 className="productResult-titulo">Top grande</h1>
-          <p className="productResult-precio">$290</p>
+          <p className="productResult-precio">$290  </p>
           <p className="productResult-descripcion">Description</p>
 
           <Link to={`/comprar`} className="productResult-boton">
