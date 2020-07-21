@@ -13,7 +13,6 @@ export default ({ img, id, precio, descripcion }) => {
             <span>${precio}</span>
             <br />{descripcion}
         </p>
-
     </>
   )
 }   
