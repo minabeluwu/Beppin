@@ -1,21 +1,16 @@
 import React from "react";
-import Filtrado from "./Filtered";
-import ProductAPIResult from "../API/ProductAPIResult";
-import Result from "./Result";
+import Filtered from "../filtered/Filtered";
+import ProductAPIResult from "../../API/ProductAPIResult";
+import ProductCart from "./ProductCard";
+
 export default () => {
-  const isOnSale = "isOnSale";
-
-  if (isOnSale === true) {
-    return;
-  }
-
   // const filteredList = json.productList.filter(product => product.isOnSale )
 
   return (
     <>
       <section class="listResult">
         <div className="filtered">
-          <Filtrado />
+          <Filtered />
         </div>
 
         <div className="result">
@@ -25,7 +20,7 @@ export default () => {
             {ProductAPIResult.productList.map(
               ({ id, precio, img, descripcion }) => (
                 <div className="promotions-card">
-                  <Result
+                  <ProductCart
                     img={img}
                     id={id}
                     precio={precio}

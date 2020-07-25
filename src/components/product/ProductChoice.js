@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import "../../styles/resultProduct.css";
-import ProductAPIResult from "../API/ProductAPIResult";
+import ProductAPIResult from "../../API/ProductAPIResult";
 
 import { Link, useParams } from "react-router-dom";
 import { DispatchContext } from "../../store/context";
@@ -24,7 +24,7 @@ const ProductChoice = () => {
       );
       // se setea al estado
       setProduct(elProduct);
-    }, 2000);
+    }, 1000);
 
     // fetch({ url: `htttp://mibackend.com/product/${id}` }, { signal: signal })
     //   .then((res) => res.json())
@@ -39,7 +39,7 @@ const ProductChoice = () => {
     (typeof product === "object" && Object.entries(product).length) === 0 ||
     product === undefined
   )
-    return <h1> CARGANDO....</h1>;
+    return <h1> Loading....</h1>;
 
   return (
     <section class="productResult">
@@ -47,7 +47,20 @@ const ProductChoice = () => {
         <ul className="productResult-list">
           <li className="productResult-item">
             <a href=" #" className="productResult-link">
-              <img src={product.img} alt=" " className="productResult-img" />
+              <img
+                src={product.imgVistaTres}
+                alt=" "
+                className="productResult-img"
+              />
+            </a>
+          </li>
+          <li className="productResult-item">
+            <a href=" #" className="productResult-link">
+              <img
+                src={product.imgVistaDos}
+                alt=" "
+                className="productResult-img"
+              />
             </a>
           </li>
           <li className="productResult-item">
@@ -59,25 +72,12 @@ const ProductChoice = () => {
               />
             </a>
           </li>
-          <li className="productResult-item">
-            <a href=" #" className="productResult-link">
-              <img
-                src={product.imgVistaTres}
-                alt=" "
-                className="productResult-img"
-              />
-            </a>
-          </li>
         </ul>
       </div>
 
       <div className="productResult-box">
         <a href=" #" className="productResult-link">
-          <img
-            src={product.imgVistaDos}
-            alt=" "
-            className="productResult-bigImg"
-          />
+          <img src={product.img} alt=" " className="productResult-bigImg" />
         </a>
 
         <div className="productResult-description">

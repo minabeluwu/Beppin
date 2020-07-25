@@ -1,7 +1,7 @@
-import React from "react"
-import Presentation from "./components/home/Presentation"
-import Discount from "./components/home/Discount"
-import Categories from "./components/home/Categories"
+import React from "react";
+import Presentation from "./pages/home/Presentation";
+import Discount from "./pages/home/Discount";
+import Categories from "./pages/home/Categories";
 
 function Home() {
   return (
@@ -10,7 +10,7 @@ function Home() {
       <Discount />
       <Categories />
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;

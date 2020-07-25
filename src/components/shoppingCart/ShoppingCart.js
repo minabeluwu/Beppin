@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import "../../styles/shoppingCart.css";
-import Product from "./Product";
-import ShoppingCartAPIResponse from "../API/ShoppingCartAPIResponse";
-import Cost from "./Cost";
+import Product from "./ProductCart";
+import Cost from "../../pages/shoppingCart/Cost";
 import OverallPrice from "./OverallPrice";
 import { StateContext } from "../../store/context";
 
@@ -14,19 +13,15 @@ export default () => {
   useEffect(() => {
     let ShoppingCartAPITotal = [];
 
-    // ShoppingCartAPIResponse.productList.forEach((producto) => {
-    //   const precio = producto.precio;
-    //   ShoppingCartAPITotal.push(precio);
-    // });
-
     shoppingCart.forEach((producto) => {
       const precio = producto.precio;
       ShoppingCartAPITotal.push(precio);
     });
 
-    const sumaTotal = ShoppingCartAPITotal.reduce((a, b) => a + b);
-
-    setTotal(sumaTotal);
+    if (ShoppingCartAPITotal.length > 0) {
+      const sumaTotal = ShoppingCartAPITotal.reduce((a, b) => a + b);
+      setTotal(sumaTotal);
+    }
   }, [shoppingCart]);
 
   return (
@@ -37,7 +32,7 @@ export default () => {
             <Product
               id={id}
               precio={precio}
-              imgSrc={img}
+              img={img}
               nombre={nombre}
               descripcion={descripcion}
             />

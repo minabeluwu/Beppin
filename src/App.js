@@ -1,26 +1,28 @@
 import React from "react";
-import Header from "./components/home/Header";
-import ListResult from "./components/result/ListResult";
-import Product from "./components/Products/Product";
-import ProductChoice from "./components/Products/ProductChoice";
-import Categories from "./components/home/Categories";
-import Woman from "./components/categories/Woman";
-import Man from "./components/categories/Man";
-import Kids from "./components/categories/Kids";
-import Babies from "./components/categories/Babies";
-import Accessories from "./components/categories/Accessories";
-import Beauty from "./components/categories/Beauty";
-import Offers from "./components/offers/Offers";
-import MyShopping from "./components/myShopping/MyShopping";
+import Header from "./pages/header/Header";
+import ListResult from "./pages/result/ListResult";
+import Product from "./components/product/Product";
+import ProductChoice from "./components/product/ProductChoice";
+import Categories from "./pages/home/Categories";
+
+import Woman from "./pages/categories/Woman";
+import Man from "./pages/categories/Man";
+import Kids from "./pages/categories/Kids";
+import Babies from "./pages/categories/Babies";
+import Accessories from "./pages/categories/Accessories";
+import Beauty from "./pages/categories/Beauty";
+
+import Offers from "./pages/offers/Offers";
+import MyShopping from "./pages/myShopping/MyShopping";
 import ShoppingCart from "./components/shoppingCart/ShoppingCart";
-import Buy from "./components/shoppingCart/Buy";
-import Pay from "./components/shoppingCart/Pay";
-import Summary from "./components/shoppingCart/Summary";
+import Buy from "./pages/shoppingCart/Buy";
+import Pay from "./pages/shoppingCart/Pay";
+import Summary from "./pages/shoppingCart/Summary";
 import Home from "./Home";
 import "./App.css";
 import Store from "./store";
 
-import { BrowserRouter, Switch, Route, useParams } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
   return (
@@ -71,7 +73,6 @@ function App() {
           <Route path="/myShopping" exact>
             <MyShopping />
           </Route>
-          {/* lo que esta despues del punto es lo que va a recibir. */}
           <Route path="/productView/:id" component={ProductChoice} exact />
 
           <Route path="/shoppingCart" exact>
