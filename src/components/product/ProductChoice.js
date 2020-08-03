@@ -1,14 +1,22 @@
 import React, { useEffect, useState, useContext } from "react";
-import "../../styles/resultProduct.css";
+import "./resultProduct.css";
 import ProductAPIResult from "../../API/ProductAPIResult";
 
 import { Link, useParams } from "react-router-dom";
-import { DispatchContext } from "../../store/context";
+import { DispatchContext, StateContext } from "../../store/context";
+import Modal from "../modal/Modal";
 
 const controller = new AbortController();
 const signal = controller.signal;
 
 const ProductChoice = () => {
+  const [open, setOpen] = useState(false);
+
+  const abrirModal = () => {
+    setOpen(!open);
+  };
+
+  const state = useContext(StateContext);
   const [product, setProduct] = useState({});
   const dispatch = useContext(DispatchContext);
 
@@ -16,6 +24,7 @@ const ProductChoice = () => {
   const { id } = useParams();
 
   useEffect(() => {
+    console.log("ahdsajkdhakd uwu");
     // se hace la simulacion de un fetch
     setTimeout(() => {
       const elProduct = ProductAPIResult.productList.find(
@@ -42,7 +51,7 @@ const ProductChoice = () => {
     return <h1> Loading....</h1>;
 
   return (
-    <section class="productResult">
+    <section className="productResult">
       <div className="productResult-images">
         <ul className="productResult-list">
           <li className="productResult-item">
@@ -85,19 +94,26 @@ const ProductChoice = () => {
           <p className="productResult-precio">${product.precio} </p>
           <p className="productResult-descripcion">{product.descripcion}</p>
 
-          <Link to={`/comprar`} className="productResult-boton">
-            Buy
+          <Link to={`/buy`} className="productResult-boton">
+            Buy now
           </Link>
           <button
             className="productResult-boton"
-            onClick={() =>
-              dispatch({ type: "ADD_ITEM_TO_SHOPPINGCART", payload: product })
-            }
+            onClick={() => {
+              dispatch({
+                type: "ADD_ITEM_TO_SHOPPINGCART",
+                payload: product,
+              });
+              dispatch({
+                type: "OPEN_MODAL",
+              });
+            }}
           >
-            Añadir al carrito
+            Add to cart
           </button>
         </div>
       </div>
+      <Modal isOpen={state.modalIsOpen} />
     </section>
   );
 };

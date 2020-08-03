@@ -1,24 +1,32 @@
 import React from "react";
 import Filtered from "../../components/filtered/Filtered";
-import ProductCard from "../../components/product/ProductCard";
-
 import ProductAPIResult from "../../API/ProductAPIResult";
+import ProductCart from "../../components/product/ProductCard";
 
-export default () => {
+import { useParams } from "react-router-dom";
+
+const CategoriesList = () => {
+  const { categoria } = useParams();
+
+  const filteredProductList = ProductAPIResult.productList.filter(
+    (producto) => {
+      const esLaCategoria = producto.categoria === categoria;
+      return esLaCategoria;
+    }
+  );
   return (
     <>
-      <section class="listResult">
+      <section className="listResult">
         <div className="filtered">
           <Filtered />
         </div>
 
         <div className="result">
-          <h2 className="listResult-title">My Shopping</h2>
-
+          <h2 className="categorie-title">{categoria}</h2>
           <div className="productCard-container">
-            {ProductAPIResult.productList.map(({ id, precio, img, nombre }) => (
+            {filteredProductList.map(({ id, precio, img, nombre }) => (
               <div className="productCard-card">
-                <ProductCard
+                <ProductCart
                   img={img}
                   id={id}
                   precio={precio}
@@ -32,3 +40,5 @@ export default () => {
     </>
   );
 };
+
+export default CategoriesList;

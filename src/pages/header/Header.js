@@ -1,52 +1,79 @@
-import React from "react"
-import {
-  Link
-} from 'react-router-dom'
-import "../../styles/header.css"
+import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
+import "./header.css";
+import { StateContext, DispatchContext } from "../../store/context";
+import Cart from "./../../img/ecommerce.svg";
+import DrawerToggleButton from "./sideDrawer/DrawerToggleButton";
+import SideDrawer from "./sideDrawer/SideDrawer";
+import Backdrop from "../../components/backdrop/Backdrop";
 
-import shoppingCart from "./../../img/shopping-cart.png"
+const Header = () => {
+  const { shoppingCart } = useContext(StateContext);
 
+  const [sideDrawerOpen, setSideDrawerOpen] = useState(false);
 
-function Header() {
+  const drawerToggleClickHandler = () => {
+    setSideDrawerOpen(!sideDrawerOpen);
+  };
+
+  const backdropClickHandler = () => {
+    setSideDrawerOpen(false);
+  };
+
+  let backdrop;
+
+  if (sideDrawerOpen) {
+    backdrop = <Backdrop click={backdropClickHandler} />;
+  }
 
   return (
     <>
       <header className="header">
-      <Link to={`/`} className="header-link">
-        <h1 className="header-title">Beppin</h1>
-      </Link>
-        
-        <form className="header-form">
-          <input type="search" />
-          <button>Search</button>
-        </form>
+        <div className="toolbar-buttom">
+          <DrawerToggleButton click={drawerToggleClickHandler} />
+          <SideDrawer show={sideDrawerOpen} />
+          {backdrop}
+        </div>
 
-        <Link to={`/shoppingCart`} className="link-shoppingCart">
-          <img src={shoppingCart} alt="" className="header-shoppingCart"/>
+        <Link to={`/`} className="header-logo">
+          <h1 className="header-title">Beppin</h1>
         </Link>
 
         <nav className="header-nav">
-          <ul className="header-list">
-            <li className="header-item">
+          <form className="header-form">
+            <input type="search" />
+            <button>Search</button>
+          </form>
+
+          <div className="container-nav">
+            {/* nav list */}
+            <ul className="header-list">
+              <li className="header-item">
                 <Link to={`/product`} className="header-link">
                   Products
                 </Link>
-            </li>
-            <li className="header-item">
-              <Link to={`/offers`} className="header-link">
-                Offers
-              </Link>
-            </li>
-            <li className="header-item">
-              <Link to={`/myShopping`} className="header-link">
-                My Shopping
-              </Link>
-            </li>
-          </ul>
+              </li>
+              <li className="header-item">
+                <Link to={`/offers`} className="header-link">
+                  Offers
+                </Link>
+              </li>
+              {/* <li className="header-item">
+                  <Link to={`/myShopping`} className="header-link">
+                    My Shopping
+                  </Link>
+                </li> */}
+            </ul>
+
+            <Link to={`/shoppingCart`} className="link-shoppingCart">
+              <img src={Cart} alt="" className="shoppingCart-icon" />
+              <span className="shoppingCart-number">{shoppingCart.length}</span>
+            </Link>
+          </div>
         </nav>
       </header>
     </>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

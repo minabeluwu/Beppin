@@ -1,13 +1,12 @@
 import React from "react";
-import "../../styles/listProduct.css";
 import Filtered from "../../components/filtered/Filtered";
 import ProductCard from "../../components/product/ProductCard";
 import ProductAPIResult from "../../API/ProductAPIResult";
 
-const Offers = ({ img, precio, descripcion, id }) => {
+const Offers = () => {
   return (
     <>
-      <section class="listResult">
+      <section className="listResult">
         <div className="filtered">
           <Filtered />
         </div>
@@ -15,13 +14,13 @@ const Offers = ({ img, precio, descripcion, id }) => {
         <div className="result">
           <h2 className="listResult-title">Offers</h2>
 
-          <div className="promotions-container">
+          <div className="productCard-container">
             {ProductAPIResult.productList
               .filter((product) => product.isOnSale)
-              .map(({ descripcion, precio, img, id }) => (
-                <div className="promotions-card">
+              .map(({ nombre, precio, img, id }) => (
+                <div className="productCard-card">
                   <ProductCard
-                    descripcion={descripcion}
+                    nombre={nombre}
                     precio={precio}
                     img={img}
                     id={id}

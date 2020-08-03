@@ -1,0 +1,30 @@
+.modal {
+  margin-top: 40px;
+
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+}
+
+.modal-button {
+  width: 30%;
+  height: 40px;
+  margin: 60px auto 0 auto;
+  font-size: 20px;
+
+  border: none;
+  background-color: #649d66;
+  transition: 0.3s;
+  color: #fff;
+  border-radius: 5px;
+}
+.modal-button:hover {
+  background-color: #7dbd7f;
+}
+.modal-button:active {
+  outline: none;
+  border: none;
+}

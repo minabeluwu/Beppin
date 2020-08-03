@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import "../../styles/shoppingCart.css";
-import Product from "./ProductCart";
+import "./shoppingCart.css";
+import ProductCart from "./ProductCart";
 import Cost from "../../pages/shoppingCart/Cost";
 import OverallPrice from "./OverallPrice";
 import { StateContext } from "../../store/context";
@@ -21,6 +21,8 @@ export default () => {
     if (ShoppingCartAPITotal.length > 0) {
       const sumaTotal = ShoppingCartAPITotal.reduce((a, b) => a + b);
       setTotal(sumaTotal);
+    } else {
+      setTotal(0);
     }
   }, [shoppingCart]);
 
@@ -29,7 +31,7 @@ export default () => {
       <section className="shoppingCart">
         <div className="shoppingCart-shoppingList">
           {shoppingCart.map(({ id, nombre, precio, img, descripcion }) => (
-            <Product
+            <ProductCart
               id={id}
               precio={precio}
               img={img}
@@ -40,8 +42,8 @@ export default () => {
         </div>
 
         <div className="cardCost">
-          {shoppingCart.map(({ nombre, id, precio }) => (
-            <Cost nombre={nombre} id={id} precio={precio} />
+          {shoppingCart.map(({ nombre, precio }) => (
+            <Cost nombre={nombre} precio={precio} />
           ))}
 
           <OverallPrice allPrice precio={total} />

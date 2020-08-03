@@ -1,0 +1,42 @@
+.side-drawer {
+  background-color: white;
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 40%;
+  z-index: 200;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
+}
+.side-drawer.open {
+  transform: translateX(0);
+}
+.sideDrawer-list {
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sideDrawer-item {
+  width: 100%;
+}
+
+.sideDrawer-link {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 995px) {
+  .side-drawer {
+    display: none;
+  }
+}

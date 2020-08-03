@@ -1,7 +1,9 @@
-import React, { Component } from "react";
-import ProductAPIResult from "../../API/ProductAPIResult";
+import React, { useContext } from "react";
+import { DispatchContext } from "../../store/context";
 
-const Product = ({ img, nombre, descripcion, precio }) => {
+const Product = ({ id, img, nombre, descripcion, precio }) => {
+  const dispatch = useContext(DispatchContext);
+
   return (
     <div className="cardProduct">
       <img src={img} alt="" className="cardProduct-img" />
@@ -14,7 +16,12 @@ const Product = ({ img, nombre, descripcion, precio }) => {
         </p>
         <p className="cardProduct-price">{precio}</p>
 
-        <button className="cardProduct-button">Delete</button>
+        <button
+          className="cardProduct-button"
+          onClick={() => dispatch({ type: "DELETE_PRODUCT", payload: id })}
+        >
+          Delete
+        </button>
       </div>
     </div>
   );

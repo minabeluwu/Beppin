@@ -1,10 +1,126 @@
 .buy {
-    outline: 1px solid black;
+  width: 80%;
+  height: 100vh;
+  margin: 20px auto 80px auto;
 
-    width: 80%;
-    margin: 20px auto 20px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .summaryBuy {
-    background-color: #ccc;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summaryBuy-title {
+  font-size: 30px;
+
+  margin-bottom: 30px;
+}
+
+.count {
+  margin-bottom: 15px;
+}
+
+.count-list {
+  font-size: 20px;
+  list-style: none;
+  padding: 0;
+
+  margin-bottom: 20px;
+}
+
+.overallPrice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-size: 25px;
+}
+
+.overallPrice span {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+/* ------------ */
+
+.midPayment {
+  margin-top: 20px;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.midPayment-title {
+  font-size: 30px;
+}
+
+.midPayment-form {
+  margin-top: 20px;
+
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.invoiceData {
+  margin-top: 20px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.invoiceData-title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.invoiceData-form {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.invoiceData-container {
+  margin-bottom: 10px;
+}
+.invoiceData-label {
+  margin-right: 10px;
+}
+
+.processButton {
+  width: 100%;
+  margin-top: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.invoiceData-buttom {
+  font-size: 20px;
+  height: 40px;
+  width: 120px;
+
+  border: none;
+  color: #fff;
+  background-color: #3282b8;
+  transition: all 0.1s linear;
+}
+
+.invoiceData-buttom:hover {
+  background-color: #bbe1fa;
 }

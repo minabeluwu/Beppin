@@ -1,0 +1,36 @@
+.presetation-background {
+  background-image: url("https://images.pexels.com/photos/949674/pexels-photo-949674.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  width: 100%;
+  height: 95vh;
+}
+.presetation-background:before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 95vh;
+
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 100;
+}
+.presetation-container {
+  display: flex;
+  align-items: center;
+
+  height: 60vh;
+}
+
+.presetation-paragraph {
+  color: #fff;
+  margin: 20px 0 0 100px;
+
+  font-size: 50px;
+  z-index: 200;
+}

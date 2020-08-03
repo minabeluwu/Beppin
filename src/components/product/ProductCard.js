@@ -1,19 +1,18 @@
-import React from 'react'
-import {Link} from 'react-router-dom' 
+import React from "react";
+import { Link } from "react-router-dom";
 
-export default ({ img, id, precio, descripcion }) => {
-    
+export default ({ img, id, precio, nombre }) => {
   return (
     <>
-        <Link to={`/productView/${id}`} className="promotions-link">
-            <img src={img} alt=" " className="promotions-img" />
-        </Link>
+      <Link to={`/productChoice/${id}`} className="productCard-link">
+        <img src={img} alt=" " className="productCard-img" />
+      </Link>
 
-        <p className="promociones-content">
-            <span>${precio}</span>
-            <br />{descripcion}
-        </p>
+      <p className="productCard-content">
+        <span>${precio}</span>
+        <br />
+        {nombre}
+      </p>
     </>
-  )
-}   
-
+  );
+};

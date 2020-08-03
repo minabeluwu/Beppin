@@ -1,6 +1,6 @@
 import React from "react";
-import "../../styles/listResult.css";
-import "../../styles/listProduct.css";
+import "./listResult.css";
+import "./product.css";
 import Filtered from "../../components/filtered/Filtered";
 
 import { Link } from "react-router-dom";
@@ -54,13 +54,13 @@ export default () => {
         <div className="result">
           <h2 className="listResult-title">Lista de Resultados</h2>
 
-          <div className="promotions-container">
-            <div className="promotions-card">
-              <Link to={`/productView`} className="promotions-link">
+          <div className="productCard-container">
+            <div className="productCard-card">
+              <Link to={`/productView`} className="productCard-link">
                 <img
                   src={json.productList[0].img}
                   alt=" "
-                  className="promotions-img"
+                  className="productCard-img"
                 />
               </Link>
 
@@ -70,12 +70,12 @@ export default () => {
               </p>
             </div>
 
-            <div className="promotions-card">
-              <Link to={`/productView`} className="promotions-link">
+            <div className="productCard-card">
+              <Link to={`/productView`} className="productCard-link">
                 <img
                   src={json.productList[1].img}
                   alt=" "
-                  className="promotions-img"
+                  className="productCard-img"
                 />
               </Link>
 

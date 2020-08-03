@@ -1,7 +1,7 @@
 import React from "react";
 import Filtered from "../filtered/Filtered";
 import ProductAPIResult from "../../API/ProductAPIResult";
-import ProductCart from "./ProductCard";
+import ProductCard from "./ProductCard";
 
 export default () => {
   // const filteredList = json.productList.filter(product => product.isOnSale )
@@ -16,19 +16,17 @@ export default () => {
         <div className="result">
           <h2 className="listResult-title">Product</h2>
 
-          <div className="promotions-container">
-            {ProductAPIResult.productList.map(
-              ({ id, precio, img, descripcion }) => (
-                <div className="promotions-card">
-                  <ProductCart
-                    img={img}
-                    id={id}
-                    precio={precio}
-                    descripcion={descripcion}
-                  />
-                </div>
-              )
-            )}
+          <div className="productCard-container">
+            {ProductAPIResult.productList.map(({ id, precio, img, nombre }) => (
+              <div className="productCard-card">
+                <ProductCard
+                  img={img}
+                  id={id}
+                  precio={precio}
+                  nombre={nombre}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
