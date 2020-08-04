@@ -38,13 +38,11 @@ const Header = () => {
         <Link to={`/`} className="header-logo">
           <h1 className="header-title">Beppin</h1>
         </Link>
-
+        <form className="header-form">
+          <input type="search" />
+          <button>Search</button>
+        </form>
         <nav className="header-nav">
-          <form className="header-form">
-            <input type="search" />
-            <button>Search</button>
-          </form>
-
           <div className="container-nav">
             {/* nav list */}
             <ul className="header-list">

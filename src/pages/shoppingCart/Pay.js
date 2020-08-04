@@ -66,7 +66,7 @@ export default () => {
               className="invoiceData-buttom"
               style={{ textDecoration: "none" }}
             >
-              continue
+              Continue
             </Link>
           </div>
         </div>

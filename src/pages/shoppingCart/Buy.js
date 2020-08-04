@@ -1,11 +1,31 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
 import "../../styles/buy.css";
 import { StateContext } from "../../store/context";
+import OverallPrice from "../../components/shoppingCart/OverallPrice";
 
 const Buy = () => {
   const { shoppingCart } = useContext(StateContext);
+  const [total, setTotal] = useState(0);
+
+  const [input, setInput] = useState("");
+
+  useEffect(() => {
+    let ShoppingCartAPITotal = [];
+
+    shoppingCart.forEach((producto) => {
+      const precio = producto.precio;
+      ShoppingCartAPITotal.push(precio);
+    });
+
+    if (ShoppingCartAPITotal.length > 0) {
+      const sumaTotal = ShoppingCartAPITotal.reduce((a, b) => a + b);
+      setTotal(sumaTotal);
+    } else {
+      setTotal(0);
+    }
+  }, [shoppingCart]);
 
   return (
     <>
@@ -22,10 +42,7 @@ const Buy = () => {
               ))}
             </ul>
 
-            <p className="overallPrice">
-              <span>overall price</span>
-              $432000
-            </p>
+            <OverallPrice allPrice precio={total} />
           </div>
         </div>
 

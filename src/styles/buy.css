@@ -119,8 +119,13 @@
   color: #fff;
   background-color: #3282b8;
   transition: all 0.1s linear;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .invoiceData-buttom:hover {
-  background-color: #bbe1fa;
+  background-color: #68a8d3;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 3px 0px;
 }

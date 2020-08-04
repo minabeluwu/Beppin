@@ -94,23 +94,25 @@ const ProductChoice = () => {
           <p className="productResult-precio">${product.precio} </p>
           <p className="productResult-descripcion">{product.descripcion}</p>
 
-          <Link to={`/buy`} className="productResult-boton">
-            Buy now
-          </Link>
-          <button
-            className="productResult-boton"
-            onClick={() => {
-              dispatch({
-                type: "ADD_ITEM_TO_SHOPPINGCART",
-                payload: product,
-              });
-              dispatch({
-                type: "OPEN_MODAL",
-              });
-            }}
-          >
-            Add to cart
-          </button>
+          <div className="productResult-container">
+            <Link to={`/buy`} className="productResult-botonLink">
+              Buy now
+            </Link>
+            <button
+              className="productResult-boton"
+              onClick={() => {
+                dispatch({
+                  type: "ADD_ITEM_TO_SHOPPINGCART",
+                  payload: product,
+                });
+                dispatch({
+                  type: "OPEN_MODAL",
+                });
+              }}
+            >
+              Add to cart
+            </button>
+          </div>
         </div>
       </div>
       <Modal isOpen={state.modalIsOpen} />

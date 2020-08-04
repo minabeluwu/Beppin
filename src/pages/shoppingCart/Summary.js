@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { StateContext } from "../../store/context";
+import OverallPrice from "../../components/shoppingCart/OverallPrice";
 import "../../styles/buy.css";
 
-export default () => {
+const Summary = () => {
+  const { shoppingCart } = useContext(StateContext);
+  const [total, setTotal] = useState(0);
+
+  useEffect(() => {
+    let ShoppingCartAPITotal = [];
+
+    shoppingCart.forEach((producto) => {
+      const precio = producto.precio;
+      ShoppingCartAPITotal.push(precio);
+    });
+
+    if (ShoppingCartAPITotal.length > 0) {
+      const sumaTotal = ShoppingCartAPITotal.reduce((a, b) => a + b);
+      setTotal(sumaTotal);
+    } else {
+      setTotal(0);
+    }
+  }, [shoppingCart]);
   return (
     <>
       <section className="buy">
@@ -24,15 +44,17 @@ export default () => {
             <h2>Product</h2>
 
             <ul>
-              <li>name of the product</li>
-              <li>name of the product</li>
-              <li>name of the product</li>
+              {shoppingCart.map(({ nombre, precio }) => (
+                <li className="count-item">
+                  {nombre} - ${precio}
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
             <p>Total price</p>
-            <p>$1234</p>
+            <OverallPrice allPrice precio={total} />
           </div>
         </div>
 
@@ -60,3 +82,5 @@ export default () => {
     </>
   );
 };
+
+export default Summary;

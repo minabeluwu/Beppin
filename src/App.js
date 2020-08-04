@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./pages/header/Header";
+import Footer from "./components/footer/Footer";
 import ListResult from "./pages/result/ListResult";
 import Product from "./components/product/Product";
 import ProductChoice from "./components/product/ProductChoice";
@@ -46,6 +47,8 @@ function App() {
           <Route path="/error" component={ErrorPage} exact />
           <Route component={PageNotFound} />
         </Switch>
+
+        <Footer />
       </BrowserRouter>
     </Store>
   );

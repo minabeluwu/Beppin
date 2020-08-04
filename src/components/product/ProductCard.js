@@ -8,11 +8,10 @@ export default ({ img, id, precio, nombre }) => {
         <img src={img} alt=" " className="productCard-img" />
       </Link>
 
-      <p className="productCard-content">
-        <span>${precio}</span>
-        <br />
-        {nombre}
-      </p>
+      <div className="productCard-content">
+        <p className="productCard-paragraph">${precio}</p>
+        <p className="productCard-paragraph">{nombre}</p>
+      </div>
     </>
   );
 };
