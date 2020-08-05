@@ -29,39 +29,33 @@ export default () => {
   return (
     <>
       <section className="shoppingCart">
-        <div className="shoppingCart-shoppingList">
-          {shoppingCart.map(({ id, nombre, precio, img, descripcion }) => (
-            <ProductCart
-              id={id}
-              precio={precio}
-              img={img}
-              nombre={nombre}
-              descripcion={descripcion}
-            />
-          ))}
+        <div className="shoppingCart-flex_container">
+          <h2 className="shoppingCart-title_Cart">Cart</h2>
+          <div className="shoppingCart-shoppingList">
+            {shoppingCart.map(({ id, nombre, precio, img, descripcion }) => (
+              <ProductCart
+                id={id}
+                precio={precio}
+                img={img}
+                nombre={nombre}
+                descripcion={descripcion}
+              />
+            ))}
+          </div>
         </div>
 
         <div className="cardCost">
+          <h2 className="shoppingCart-title_summary">Order summary</h2>
           {shoppingCart.map(({ nombre, precio }) => (
             <Cost nombre={nombre} precio={precio} />
           ))}
-
           <OverallPrice allPrice precio={total} />
-        </div>
-      </section>
-
-      <div className="buttons-container">
-        <div className="buttons">
-          {/* Este boton anula todas las compras agregadas, hace un reset. */}
-          <a href="#" className="button">
-            Cancel
-          </a>
 
           <Link to={`/Buy`} className="button">
             Buy
           </Link>
         </div>
-      </div>
+      </section>
     </>
   );
 };

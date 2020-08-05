@@ -13,7 +13,6 @@ import Pay from "./pages/shoppingCart/Pay";
 import Summary from "./pages/shoppingCart/Summary";
 import Home from "./Home";
 import "./App.css";
-// ke
 import "./pages/result/listResult.css";
 import "./pages/result/product.css";
 
@@ -39,8 +38,8 @@ function App() {
           />
           <Route path="/product" component={Product} exact />
           <Route path="/offers" component={Offers} exact />
-
           {/* <Route path="/myShopping" component={MyShopping} exact /> */}
+
           <Route path="/productChoice/:id" component={ProductChoice} exact />
           <Route path="/shoppingCart" component={ShoppingCart} exact />
           <Route path="/buy" component={Buy} exact />

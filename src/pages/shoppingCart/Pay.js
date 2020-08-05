@@ -1,22 +1,23 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../styles/buy.css";
+import "./buy.css";
+import "./pay.css";
 
 export default () => {
   return (
     <>
       <section className="buy">
-        <div>
-          <h1>Tipo de pago</h1>
+        <div className="summaryBuy">
+          <h1 className="summaryBuy-title">Type of payment</h1>
 
-          <form>
+          <form className="pay-form">
             <label for="" className="invoiceData-label">
-              account number
+              account number:
             </label>
             <input type="text" className="invoiceData-text" />
 
             <label for="" className="invoiceData-label">
-              verification code
+              verification code:
             </label>
             <input type="text" className="invoiceData-text" />
           </form>
@@ -54,12 +55,15 @@ export default () => {
             </form>
           </div>
 
-          <p>
-            date: <br /> 18/07/2020
-          </p>
-          <p>
-            Name: <br /> Ana Maria
-          </p>
+          <div className="pay-date-container">
+            <p className="pay-date">
+              <span>Date:</span> 18/07/2020
+            </p>
+            <p className="pay-date">
+              <span>Name:</span> Ana Maria
+            </p>
+          </div>
+
           <div className="processButton">
             <Link
               to={`/summary`}

@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 
 import { Link } from "react-router-dom";
-import "../../styles/buy.css";
+import "./buy.css";
 import { StateContext } from "../../store/context";
 import OverallPrice from "../../components/shoppingCart/OverallPrice";
 
@@ -37,7 +37,10 @@ const Buy = () => {
             <ul className="count-list">
               {shoppingCart.map(({ nombre, precio }) => (
                 <li className="count-item">
-                  {nombre} - ${precio}
+                  <div className="count-item-container">
+                    <p>{nombre}</p>
+                    <p>${precio}</p>
+                  </div>
                 </li>
               ))}
             </ul>
@@ -52,26 +55,26 @@ const Buy = () => {
           <form className="invoiceData-form">
             <div className="invoiceData-container">
               <label for="" className="invoiceData-label">
-                Name
+                Name:
               </label>
               <input type="text" className="invoiceData-text" />
             </div>
 
             <div className="invoiceData-container">
               <label for="" className="invoiceData-label">
-                address
+                address:
               </label>
               <input type="text" className="invoiceData-text" />
             </div>
             <div className="invoiceData-container">
               <label for="" className="invoiceData-label">
-                Number
+                Phone:
               </label>
               <input type="text" className="invoiceData-text" />
             </div>
             <div className="invoiceData-container">
               <label for="" className="invoiceData-label">
-                Email
+                Email:
               </label>
               <input type="text" className="invoiceData-text" />
             </div>

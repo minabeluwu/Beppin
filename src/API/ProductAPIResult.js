@@ -128,25 +128,6 @@ export default {
         "https://img.ltwebstatic.com/images3_pi/2019/12/26/1577346791896107fed1cf209c03f1e1d121867716.webp",
     },
     {
-      id: 8,
-      isOnSale: false,
-      nombre: "Mono con estampado",
-      categoria: "woman",
-      precio: 462.0,
-      descripcion:
-        "Mono capucha con estampado de arte pop con cordón delantero",
-      articulo: "Mono",
-      img:
-        "https://img.ltwebstatic.com/images3_pi/2020/05/09/1589010105943e73317ebbc68064ae5ed8cd2eb09a_thumbnail_900x.webp",
-
-      imgVista:
-        "https://img.ltwebstatic.com/images3_pi/2020/05/09/1589010101f18f68afc484035c3b986dd699ecf942_thumbnail_900x.webp",
-      imgVistaDos:
-        "https://img.ltwebstatic.com/images3_pi/2020/05/09/15890100968c22dc62fadd0c9ae9c50aca48c8fbed_thumbnail_900x.webp",
-      imgVistaTres:
-        "https://img.ltwebstatic.com/images3_pi/2020/05/09/158901011081108e9524b83c57fcc7eede66550dd5_thumbnail_900x.webp",
-    },
-    {
       id: 9,
       isOnSale: false,
       discount: true,

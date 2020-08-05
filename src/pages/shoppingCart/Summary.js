@@ -2,7 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { StateContext } from "../../store/context";
 import OverallPrice from "../../components/shoppingCart/OverallPrice";
-import "../../styles/buy.css";
+import "./buy.css";
+import "./summary.css";
 
 const Summary = () => {
   const { shoppingCart } = useContext(StateContext);
@@ -26,45 +27,43 @@ const Summary = () => {
   return (
     <>
       <section className="buy">
-        <div>
-          <h1>payment details</h1>
+        <div className="summaryBuy">
+          <h1 className="summaryBuy-title">payment details</h1>
 
-          <p>Banco / medio de pago</p>
-          <p>
-            Nombre: Ana Maria <br />
-            correo: ana34@gmail.com <br />
-            direccion: camarones <br />
-            tel: +54 911765892
+          <p className="payment-paragraph">Bank / Means of payment</p>
+          <p className="payment-paragraph">
+            Name: Ana Maria <br />
+            Email: ana34@gmail.com <br />
+            Address: camarones <br />
+            Phone: +54 911765892
           </p>
         </div>
         <div>
-          <h1>purchase data</h1>
+          <h1 className="summaryBuy-title">purchase data</h1>
 
-          <div>
-            <h2>Product</h2>
+          <div className="payment-product">
+            <h2 className="payment-product_title">Product</h2>
 
-            <ul>
+            <ul className="payment-product_list">
               {shoppingCart.map(({ nombre, precio }) => (
-                <li className="count-item">
+                <li className="payment-product_item">
                   {nombre} - ${precio}
                 </li>
               ))}
             </ul>
           </div>
 
-          <div>
-            <p>Total price</p>
-            <OverallPrice allPrice precio={total} />
-          </div>
+          <OverallPrice allPrice precio={total} />
         </div>
 
-        <div>
+        <div className="payment-bottom">
           <Link
             to={`/shoppingCart`}
             style={{
               marginRight: "30px",
               textDecoration: "none",
             }}
+            className="payment-bottom_goOut"
           >
             go out
           </Link>
@@ -74,6 +73,7 @@ const Summary = () => {
             style={{
               textDecoration: "none",
             }}
+            className="payment-bottom_buy"
           >
             Buy
           </Link>
