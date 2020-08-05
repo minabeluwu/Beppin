@@ -1,7 +1,6 @@
 import React from "react";
 import Filtered from "../../components/filtered/Filtered";
 import ProductCard from "../../components/product/ProductCard";
-
 import ProductAPIResult from "../../API/ProductAPIResult";
 
 export default () => {

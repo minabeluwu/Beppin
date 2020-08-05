@@ -5,6 +5,7 @@ import ProductAPIResult from "../../API/ProductAPIResult";
 import { Link, useParams } from "react-router-dom";
 import { DispatchContext, StateContext } from "../../store/context";
 import Modal from "../modal/Modal";
+import loading from "../../img/loading.svg";
 
 const controller = new AbortController();
 const signal = controller.signal;
@@ -24,7 +25,6 @@ const ProductChoice = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    console.log("ahdsajkdhakd uwu");
     // se hace la simulacion de un fetch
     setTimeout(() => {
       const elProduct = ProductAPIResult.productList.find(
@@ -48,74 +48,65 @@ const ProductChoice = () => {
     (typeof product === "object" && Object.entries(product).length) === 0 ||
     product === undefined
   )
-    return <h1> Loading....</h1>;
+    return (
+      <h1 className="messenge_loading">
+        {" "}
+        <img src={loading} alt="" className="messenge_loading-img" />
+      </h1>
+    );
 
   return (
     <section className="productResult">
+      <Modal isOpen={state.modalIsOpen} />
+
       <div className="productResult-images">
         <ul className="productResult-list">
           <li className="productResult-item">
-            <a href=" #" className="productResult-link">
-              <img
-                src={product.imgVistaTres}
-                alt=" "
-                className="productResult-img"
-              />
-            </a>
+            <img
+              src={product.imgVistaTres}
+              alt=" "
+              className="productResult-img"
+            />
           </li>
           <li className="productResult-item">
-            <a href=" #" className="productResult-link">
-              <img
-                src={product.imgVistaDos}
-                alt=" "
-                className="productResult-img"
-              />
-            </a>
+            <img
+              src={product.imgVistaDos}
+              alt=" "
+              className="productResult-img"
+            />
           </li>
           <li className="productResult-item">
-            <a href=" #" className="productResult-link">
-              <img
-                src={product.imgVista}
-                alt=" "
-                className="productResult-img"
-              />
-            </a>
+            <img src={product.imgVista} alt=" " className="productResult-img" />
           </li>
         </ul>
+        <img src={product.img} alt=" " className="productResult-bigImg" />
       </div>
 
       <div className="productResult-box">
-        <a href=" #" className="productResult-link">
-          <img src={product.img} alt=" " className="productResult-bigImg" />
-        </a>
+        <h1 className="productResult-title"> {product.nombre} </h1>
+        <p className="productResult-description">{product.descripcion}</p>
+        <p className="productResult-price">${product.precio} </p>
 
-        <div className="productResult-description">
-          <h1 className="productResult-titulo"> {product.nombre} </h1>
-          <p className="productResult-precio">${product.precio} </p>
-          <p className="productResult-descripcion">{product.descripcion}</p>
-
-          <div className="productResult-container">
-            <Link to={`/buy`} className="productResult-botonLink">
-              Buy now
-            </Link>
-            <button
-              className="productResult-boton"
-              onClick={() => {
-                dispatch({
-                  type: "ADD_ITEM_TO_SHOPPINGCART",
-                  payload: product,
-                });
-                dispatch({
-                  type: "OPEN_MODAL",
-                });
-              }}
-            >
-              Add to cart
-            </button>
-          </div>
+        <div className="productResult-container">
+          <Link to={`/buy`} className="productResult-botonLink">
+            Buy now
+          </Link>
+          <button
+            className="productResult-boton"
+            onClick={() => {
+              dispatch({
+                type: "ADD_ITEM_TO_SHOPPINGCART",
+                payload: product,
+              });
+              dispatch({
+                type: "OPEN_MODAL",
+              });
+            }}
+          >
+            Add to cart
+          </button>
         </div>
       </div>
-      <Modal isOpen={state.modalIsOpen} />
     </section>
   );
 };

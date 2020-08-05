@@ -21,11 +21,6 @@ const ToolBar = (props) => {
             Offers
           </Link>
         </li>
-        <li className="sideDrawer-item">
-          <Link to={`/myShopping`} className="sideDrawer-link">
-            My Shopping
-          </Link>
-        </li>
       </ul>
     </nav>
   );

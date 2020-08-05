@@ -1,5 +1,6 @@
 .side-drawer {
   background-color: white;
+  padding: 10px;
   position: fixed;
   top: 0;
   height: 100%;
@@ -18,15 +19,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  width: 100%;
 }
 
 .sideDrawer-item {
   width: 100%;
+
+  border-bottom: 2px solid #df5e88;
 }
 
 .sideDrawer-link {
   text-decoration: none;
   color: black;
+  font-size: 20px;
   width: 100%;
 
   height: 70px;

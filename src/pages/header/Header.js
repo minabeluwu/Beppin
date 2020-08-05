@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "./header.css";
-import { StateContext, DispatchContext } from "../../store/context";
+import { StateContext } from "../../store/context";
 import Cart from "./../../img/ecommerce.svg";
 import DrawerToggleButton from "./sideDrawer/DrawerToggleButton";
 import SideDrawer from "./sideDrawer/SideDrawer";

@@ -1,12 +1,26 @@
 .modal {
+  background-color: #fff;
+  position: fixed;
+  top: 200px;
+  bottom: 0;
+
+  width: 40%;
+  height: 200px;
+
+  display: flex;
+  margin: 0 0 0 400px;
+  flex-direction: column;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 3px 3px 1px;
+}
+
+.modal-content {
   margin-top: 40px;
 
   font-size: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
-
-  color: #fff;
 }
 
 .modal-button {
@@ -20,9 +34,10 @@
   transition: 0.3s;
   color: #fff;
   border-radius: 5px;
+  cursor: pointer;
 }
 .modal-button:hover {
-  background-color: #7dbd7f;
+  background-color: #8acf8c;
 }
 .modal-button:active {
   outline: none;

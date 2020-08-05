@@ -1,49 +1,90 @@
-.productResult {
-  margin-top: 30px;
+.messenge_loading {
+  height: 80vh;
+
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+.messenge_loading-img {
+  width: 70px;
+  height: 70px;
+  animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.productResult {
+  margin: 30px auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.productResult-images {
+  display: flex;
 }
 
 .productResult-list {
   list-style: none;
   padding: 0;
+  margin: 0 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.productResult-item {
+  display: flex;
 }
 
 .productResult-img {
   width: 150px;
 }
-
-.productResult-box {
-  width: 70%;
-
-  display: flex;
-  justify-content: center;
-}
 .productResult-bigImg {
   width: 500px;
 }
 
-.productResult-titulo {
+.productResult-box {
+  width: 45%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.productResult-title {
   font-size: 30px;
-  margin: 50px 0 40px 0;
+  margin: 100px 0 20px 0;
   padding: 0 40px 0 40px;
   text-align: center;
 }
-.productResult-precio {
-  font-size: 40px;
-  margin: 0 0 30px 0;
-}
 
 .productResult-description {
-  padding: 0 0 0 30px;
+  font-size: 23px;
+  text-align: center;
+
+  width: 90%;
+  margin: 0 auto;
 }
-.productResult-descripcion {
-  margin: 0 0 50px 0;
+
+.productResult-price {
+  font-size: 40px;
+  font-weight: bold;
+  width: 70%;
+  margin: 30px auto 10px auto;
 }
 
 .productResult-container {
-  width: 100%;
+  width: 70%;
+  margin: 0 auto;
+
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -51,14 +92,14 @@
 .productResult-botonLink {
   text-decoration: none;
   color: #fff;
-  font-size: 20px;
+  font-size: 23px;
   background-color: #1565c0;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
-  width: 40%;
+  width: 200px;
   height: 38px;
   padding-bottom: 2px;
   transition: all 0.2s;
@@ -69,9 +110,9 @@
 }
 
 .productResult-boton {
-  font-size: 20px;
+  font-size: 23px;
   border: none;
-  width: 50%;
+  width: 200px;
   height: 40px;
   color: #fff;
 

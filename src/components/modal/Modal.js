@@ -8,18 +8,8 @@ const Modal = ({ isOpen }) => {
   return (
     <React.Fragment>
       {isOpen ? (
-        <div
-          style={{
-            position: "absolute",
-            backgroundColor: "rgba(0,0,0,0.6)",
-            width: "50%",
-            height: "200px",
-            display: "flex",
-            flexDirection: "column",
-            borderRadius: "5px",
-          }}
-        >
-          <p className="modal">You have added a product</p>
+        <div className="modal">
+          <p className="modal-content">You have added a product</p>
           <button
             onClick={() => {
               dispatch({

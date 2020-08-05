@@ -17,7 +17,8 @@
 .header-title {
   color: #b83b5e;
   margin: 0;
-  font-size: 30px;
+  font-size: 35px;
+  font-family: "Dancing Script", cursive;
 }
 
 /* links navegation */
@@ -37,7 +38,7 @@
   list-style: none;
   padding: 0;
 
-  width: 150px;
+  width: 120px;
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -54,6 +55,7 @@
 }
 .header-link {
   text-decoration: none;
+  font-size: 19px;
   color: #000;
 }
 
@@ -67,7 +69,6 @@
 }
 
 .header-form input {
-  margin-right: 5px;
   width: 60%;
   height: 25px;
   border-radius: 5px;
@@ -81,6 +82,8 @@
   height: 25px;
   border: none;
   color: #fff;
+  margin-left: 5px;
+  font-size: 17px;
 
   border-radius: 5px;
   background: transparent;
@@ -98,7 +101,7 @@
 /* shopping cart */
 
 .link-shoppingCart {
-  margin: 10px 0 0 40px;
+  margin: 10px 0 0 0;
   height: 40px;
 
   text-decoration: none;
@@ -108,7 +111,7 @@
   width: 40px;
   height: 40px;
 
-  margin-right: 50px;
+  margin: 0 50px 0 30px;
 }
 
 .shoppingCart-number {
@@ -121,7 +124,7 @@
   border-radius: 50%;
   position: absolute;
   top: 2px;
-  margin-left: 40px;
+  margin-left: 70px;
 
   display: flex;
   justify-content: center;
@@ -134,7 +137,32 @@
   }
 
   .header-title {
-    margin-right: 300px;
+    font-size: 30px;
+  }
+  .header-logo {
+    margin: 0;
+  }
+
+  .shoppingCart-icon {
+    width: 30px;
+    height: 30px;
+
+    margin-right: 50px;
+  }
+  .shoppingCart-number {
+    width: 20px;
+    height: 20px;
+    top: 4px;
+    margin-left: 50px;
+  }
+  .header-form button {
+    margin: 0;
+    width: 40px;
+
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

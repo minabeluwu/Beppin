@@ -1,11 +1,15 @@
 .listResult {
   display: flex;
+  padding-top: 50px;
+  min-height: 80vh;
 }
 
 .filtered {
-  padding: 20px 50px;
+  width: 20%;
 
-  width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .filtered-title {
@@ -15,8 +19,12 @@
 .filtered-list {
   list-style: none;
   padding: 0;
+  width: 80%;
+  margin: 10px auto;
 
-  margin: 30px 0 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .filtered-item {
@@ -27,6 +35,11 @@
   text-decoration: none;
   color: #888888;
   font-size: 15px;
+  transition: all 0.4s;
+}
+.filtered-link:hover {
+  text-decoration: none;
+  color: #000;
 }
 
 /* ------- Lista de resultados -------- */
@@ -36,9 +49,13 @@
 }
 
 .listResult-title {
-  font-size: 30px;
-  margin: 30px 0 30px 40px;
+  font-size: 35px;
+  margin: 0 0 30px 70px;
 }
 .categorie-title:first-letter {
   text-transform: uppercase;
+}
+.categorie-title {
+  font-size: 35px;
+  margin: 0 0 30px 70px;
 }

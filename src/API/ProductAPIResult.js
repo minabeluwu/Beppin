@@ -213,7 +213,7 @@ export default {
       categoria: "woman",
       precio: 188.0,
       descripcion: "Top corto con estampado de letra reflectivo",
-      articulo: "top de mujer",
+      articulo: "Top de mujer",
       img:
         "https://img.ltwebstatic.com/images3_pi/2020/06/08/1591613736540493f25aa8636a10839075a5a81bda_thumbnail_900x.webp",
 

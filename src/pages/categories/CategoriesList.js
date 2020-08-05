@@ -2,7 +2,6 @@ import React from "react";
 import Filtered from "../../components/filtered/Filtered";
 import ProductAPIResult from "../../API/ProductAPIResult";
 import ProductCart from "../../components/product/ProductCard";
-
 import { useParams } from "react-router-dom";
 
 const CategoriesList = () => {
