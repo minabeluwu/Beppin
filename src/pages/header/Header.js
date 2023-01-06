@@ -36,7 +36,7 @@ const Header = () => {
         </div>
 
         <Link to={`/`} className="header-logo">
-          <h1 className="header-title">Beppin</h1>
+          <h1 className="header-title">Pina</h1>
         </Link>
         <form className="header-form">
           <input type="search" />
