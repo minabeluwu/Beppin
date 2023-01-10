@@ -8,7 +8,7 @@ export default () => {
     <>
       <section className="categories">
         <div className="categories-size">
-          <h2 className="categories-title">Categories</h2>
+          <h2 className="categories-title">Categorias</h2>
 
           <div className="categories-container">
             {CategoriesAPIResults.categoriesList.map(({ link, src, name }) => (

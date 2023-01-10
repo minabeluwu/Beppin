@@ -5,7 +5,7 @@ import Result from "../../components/product/ProductCard";
 function Discount() {
   return (
     <section className="productCard">
-      <h1 className="productCard-title">Discount</h1>
+      <h1 className="productCard-title">Descuentos</h1>
       <div className="productCard-container">
         {ProductAPIResult.productList
           .filter((product) => product.discount)

@@ -36,7 +36,7 @@ const Header = () => {
         </div>
 
         <Link to={`/`} className="header-logo">
-          <h1 className="header-title">Pina</h1>
+          <h1 className="header-title">UwU</h1>
         </Link>
         <form className="header-form">
           <input type="search" />
@@ -48,12 +48,12 @@ const Header = () => {
             <ul className="header-list">
               <li className="header-item">
                 <Link to={`/product`} className="header-link">
-                  Products
+                  Productos
                 </Link>
               </li>
               <li className="header-item">
                 <Link to={`/offers`} className="header-link">
-                  Offers
+                  Ofertas
                 </Link>
               </li>
               {/* <li className="header-item">
