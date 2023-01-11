@@ -14,7 +14,7 @@ export default () => {
         </div>
 
         <div className="result">
-          <h2 className="listResult-title">Product</h2>
+          <h2 className="listResult-title">Productos</h2>
 
           <div className="productCard-container">
             {ProductAPIResult.productList.map(({ id, precio, img, nombre }) => (

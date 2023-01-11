@@ -9,7 +9,7 @@ const Modal = ({ isOpen }) => {
     <React.Fragment>
       {isOpen ? (
         <div className="modal">
-          <p className="modal-content">You have added a product</p>
+          <p className="modal-content">Necesitas agregar un producto</p>
           <button
             onClick={() => {
               dispatch({
@@ -18,7 +18,7 @@ const Modal = ({ isOpen }) => {
             }}
             className="modal-button"
           >
-            Accept
+            Aceptar
           </button>
         </div>
       ) : null}

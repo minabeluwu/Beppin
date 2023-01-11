@@ -103,7 +103,7 @@ const ProductChoice = () => {
               });
             }}
           >
-            Add to cart
+            Añadir al carrito
           </button>
         </div>
       </div>
