@@ -36,12 +36,12 @@ const Header = () => {
         </div>
 
         <Link to={`/`} className="header-logo">
-          <h1 className="header-title">UwU</h1>
+          <h1 className="header-title">Beppin</h1>
         </Link>
-        <form className="header-form">
+        {/* <form className="header-form">
           <input type="search" />
           <button>Search</button>
-        </form>
+        </form> */}
         <nav className="header-nav">
           <div className="container-nav">
             {/* nav list */}
